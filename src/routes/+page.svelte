@@ -18,7 +18,7 @@
 </script>
 
 <div class="container">
-    <img src={imageUrl} class="image" />
+    <img src={imageUrl} class="image" alt=""/>
     <div class="text">{titel}</div>
   </div>
   <div class="the-days">
