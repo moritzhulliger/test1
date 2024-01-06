@@ -1,30 +1,37 @@
 <script>
-   export const welcomeMessage = "Thuy-Duc \n & Moritz"
-   console.log(welcomeMessage)
+    export const altText = "Thuy-Duc \n & Moritz";
 </script>
-
-<div class="main-container">
-    <h1>{welcomeMessage}</h1>
-
-</div>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
-<style>
- .main-container {
-    position: absolute;
-
-    width: 100vw;
-    height: 50vh;
-    min-height: 60vw;
-    background-image: url(/src/lib/images/main1.jpg);
-    background-size: cover;
- }
-
- h1 {
-    font-weight: 100;
-    font-size: 5rem;
-    width: 40vw;
-    margin: 50px auto 0;
-    text-align: center;
- }
-</style>
+  
+  <style>
+    .container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 80%; /* 4:5 aspect ratio (5/4 * 100%) */
+    }
+  
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the image covers the container */
+    }
+  
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  </style>
+  
+  <div class="container">
+    <img src={imageUrl} alt={altText} class="image" />
+    <div class="text">Your Centered Text</div>
+  </div>
