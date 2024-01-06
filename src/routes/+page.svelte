@@ -1,7 +1,16 @@
 <script>
-    export const altText = "Thuy-Duc \n & Moritz";
+    import Theday from "$lib/Theday.svelte";
+    export const titel = "Thuy-Duc \n & Moritz";
+    export const imageUrl = "src/lib/images/main1.jpg";
 </script>
-  
+
+<div class="container">
+    <img src={imageUrl} class="image" />
+    <div class="text">{titel}</div>
+  </div>
+  <Theday />
+
+
   <style>
     .container {
       position: relative;
@@ -21,17 +30,12 @@
   
     .text {
       position: absolute;
-      top: 50%;
+      top: 15%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: white;
       text-align: center;
-      font-size: 1.5em;
-      font-weight: bold;
+      font-size: 7em;
+      font-weight: 100;
     }
   </style>
   
-  <div class="container">
-    <img src={imageUrl} alt={altText} class="image" />
-    <div class="text">Your Centered Text</div>
-  </div>
