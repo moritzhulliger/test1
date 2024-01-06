@@ -12,6 +12,8 @@
 
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
     .container {
       position: relative;
       width: 100%;
@@ -29,6 +31,8 @@
     }
   
     .text {
+        font-family: 'Playfair Display', serif;
+
       position: absolute;
       top: 15%;
       left: 50%;
