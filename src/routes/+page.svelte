@@ -2,13 +2,32 @@
     import Theday from "$lib/Theday.svelte";
     export const titel = "Thuy-Duc \n & Moritz";
     export const imageUrl = "src/lib/images/main1.jpg";
+
+    export const thedays = [
+        {
+            title: "hallo",
+            paragraph: "velo",
+            images: [
+                "src/lib/images/a1.jpg",
+                "src/lib/images/a2.jpg",
+                "src/lib/images/a3.jpg",
+                "src/lib/images/a4.jpg"
+            ]
+        },
+    ]
 </script>
 
 <div class="container">
     <img src={imageUrl} class="image" />
     <div class="text">{titel}</div>
   </div>
-  <Theday />
+  <div class="the-days">
+    {#each thedays as {title, paragraph, images}}
+    <Theday heading={title} descriptions={paragraph} images={images} />
+  {/each}
+  </div>
+
+
 
 
   <style>
@@ -19,6 +38,10 @@
       width: 100%;
       height: 0;
       padding-bottom: 80%; /* 4:5 aspect ratio (5/4 * 100%) */
+    }
+
+    .the-days {
+        position: relative;
     }
   
     .image {
