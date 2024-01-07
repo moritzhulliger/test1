@@ -57,10 +57,13 @@
   <div class="left-line"></div>
   <div class="subtitle">THE FOR OF US</div>
 </div>
-<h1>FOREVER</h1>
-{#each snaps as snap}
-  <Snaps snap={snap} />
-{/each}
+<div class="snaps">
+  <h1>FOREVER</h1>
+  {#each snaps as snap}
+    <Snaps snap={snap} />
+  {/each}
+</div>
+
 
 
 
@@ -78,7 +81,12 @@
         font-weight: 100;
         letter-spacing: 20px;
     }
-    
+
+    .snaps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .top-liner {
         margin: 85px 0 65px;
         display: flex;
