@@ -2,6 +2,8 @@
     import Intro from "$lib/Intro.svelte";
     import SpecialDays from "$lib/SpecialDays.svelte";
     import Snaps from "$lib/Snaps.svelte";
+    import FamilyMoon from "$lib/FamilyMoon.svelte";
+
     import imgUrl1 from "./src/lib/images/days/d1.jpg"
     import imgUrl2 from "./src/lib/images/days/d2.jpg"
     import imgUrl3 from "./src/lib/images/days/d3.jpg"
@@ -47,6 +49,16 @@
       "src/lib/images/days/d1.jpg",
       "src/lib/images/days/d2.jpg"
     ]
+
+    export const destinations = [
+      "src/lib/images/familymoon/IMG_6575.jpg",
+      "src/lib/images/familymoon/IMG_7763.jpg",
+      "src/lib/images/familymoon/IMG_7765.jpg",
+      "src/lib/images/familymoon/IMG_8234.jpg",
+      "src/lib/images/familymoon/IMG_8348.jpg",
+      "src/lib/images/familymoon/IMG_8737.jpg",
+      "src/lib/images/familymoon/IMG_8886.jpg"
+    ]
 </script>
 
 <Intro/>
@@ -68,6 +80,18 @@
     <Snaps snap={snap} />
   {/each}
 </div>
+<div class="top-liner">
+  <div class="left-line"></div>
+  <div class="subtitle">travel the world</div>
+</div>
+<div class="familymoon">
+  <h1>Family moon</h1>
+  <div class="wrapper">    
+    {#each destinations as dest}
+      <FamilyMoon dest={dest} />
+    {/each}
+  </div>
+</div>
 
 
 
@@ -85,6 +109,7 @@
         font-size: 5.5rem;
         font-weight: 100;
         letter-spacing: 20px;
+        text-transform: uppercase;
     }
 
     .snaps {
@@ -97,6 +122,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        text-transform: uppercase;
 
         .left-line {
         
@@ -141,6 +167,10 @@
       text-align: center;
       font-size: 7em;
       font-weight: 100;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: row;
     }
   </style>
   
