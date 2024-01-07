@@ -2,33 +2,50 @@
     import Intro from "$lib/Intro.svelte";
     import SpecialDays from "$lib/SpecialDays.svelte";
     import Snaps from "$lib/Snaps.svelte";
-    import FamilyMoon from "$lib/FamilyMoon.svelte";
+    import FamilyMoon from "$lib/Familymoon.svelte";
 
+<<<<<<< HEAD
     export const map = "src/lib/images/shokunin_World_Map.svg"
 
     export const specialDays = [
       {
         image: "src/lib/images/days/IMG_2600.jpeg",
+=======
+    import imgUrl1 from "../lib/images/days/d1.jpg"
+    import imgUrl2 from "../lib/images/days/d2.jpg"
+    import imgUrl3 from "../lib/images/days/d3.jpg"
+    import imgUrl4 from "../lib/images/days/d4.jpg"
+    import imgUrl5 from "../lib/images/days/d5.jpg"
+
+    export const titel = "Thuy-Duc \n ..tz";
+    export const imageUrl = "src/lib/images/main1.jpg";
+    export const ssr = false;
+    export let data;
+
+    export const specialDays = [
+      {
+        image: imgUrl1,
+>>>>>>> e3e75ae5a471258672ca09d47c1479959372c8c7
         title: "01",
         text: "COCKTAIL, AVENUE APP - LINETTE"
       },
       {
-        image: "src/lib/images/days/d2.jpg",
+        image: imgUrl2,
         title: "02",
         text: "Park Lunch, Eifeltower"
       },
       {
-        image: "src/lib/images/days/d3.jpg",
+        image: imgUrl3,
         title: "03",
         text: "First, La Coupole"
       },
       {
-        image: "src/lib/images/days/d4.jpg",
+        image: imgUrl4,
         title: "04",
         text: "Second, Hanoi 1988"
       },
       {
-        image: "src/lib/images/days/d5.jpg",
+        image: imgUrl5,
         title: "05",
         text: "Caffé, LouLou"
       },
@@ -87,6 +104,8 @@
         capture: "singapore"
       }
     ]
+
+    console.log("daa", data);
 </script>
 
 <Intro/>
@@ -95,8 +114,8 @@
   <div class="left-line"></div>
   <div class="subtitle">OUR SPECIAL DAYS</div>
 </div>
-{#each specialDays as {image, title, text}}
-  <SpecialDays image={image} title={title} text={text} />
+{#each data.data.listSpecialDayElements.items as item}
+  <SpecialDays image={item.Image} title={item.Title} text={item.Description} />
 {/each}
 <div class="top-liner">
   <div class="left-line"></div>
