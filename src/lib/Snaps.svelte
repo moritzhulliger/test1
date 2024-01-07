@@ -18,9 +18,9 @@
     border: 3px solid black;
     border-radius: 40% 40% 40% 40%;
     // Adjust the border-radius values as needed
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 
-    
+
     img {
         display: block;
         width: 100%;
