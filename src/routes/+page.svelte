@@ -9,14 +9,6 @@
     export const ssr = false;
     export let data;
 
-    export const snaps = [
-      "src/lib/images/days/d2.jpg",
-      "src/lib/images/days/d6.jpg",
-      "src/lib/images/days/d2.jpg",
-      "src/lib/images/days/d1.jpg",
-      "src/lib/images/days/d2.jpg"
-    ]
-
     export const destinations = [
       { 
         image: "src/lib/images/familymoon/IMG_6575.jpg",
@@ -57,17 +49,20 @@
   <div class="left-line"></div>
   <div class="subtitle">OUR SPECIAL DAYS</div>
 </div>
-{#each data.allSpecialDayElements.data.listSpecialDayElements.items as item}
+<div class="special-days-container">
+  {#each data.allSpecialDayElements.data.listSpecialDayElements.items as item}
   <SpecialDays image={item.Image} title={item.Title} text={item.Description} />
 {/each}
+</div>
+
 <div class="top-liner">
   <div class="left-line"></div>
   <div class="subtitle">THE FOuR OF US</div>
 </div>
 <div class="snaps">
   <h1>SNAP!</h1>
-  {#each snaps as snap}
-    <Snaps snap={snap} />
+  {#each data.allSnaps.data.listSnaps.items as snap}
+    <Snaps snap={snap.snap} />
   {/each}
 </div>
 <div class="top-liner">
@@ -175,6 +170,11 @@
     .revealUp {
       opacity: 0;
       visibility: hidden;
+    }
+
+    .special-days-container {
+      display: flex;
+      justify-content: center;
     }
   </style>
   

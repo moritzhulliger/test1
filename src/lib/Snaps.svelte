@@ -6,7 +6,7 @@
      * @type {string}
      */
      export let snap;
-
+    console.log("snapp", snap);
 
 
 </script>
