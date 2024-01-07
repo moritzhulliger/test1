@@ -31,7 +31,7 @@
     .day {
         display: grid;
         grid-template-columns: 40% 1fr;
-        margin-bottom: 35px;
+        margin-bottom: 65px;
 
         h2 {
             font-size: 75px;

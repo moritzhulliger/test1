@@ -21,7 +21,6 @@
     // Adjust the border-radius values as needed
     margin-bottom: 120px;
 
-    
     img {
         display: block;
         width: 100%;
