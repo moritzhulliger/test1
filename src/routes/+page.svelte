@@ -2,34 +2,39 @@
     import Intro from "$lib/Intro.svelte";
     import SpecialDays from "$lib/SpecialDays.svelte";
     import Snaps from "$lib/Snaps.svelte";
+    import imgUrl1 from "./src/lib/images/days/d1.jpg"
+    import imgUrl2 from "./src/lib/images/days/d2.jpg"
+    import imgUrl3 from "./src/lib/images/days/d3.jpg"
+    import imgUrl4 from "./src/lib/images/days/d4.jpg"
+    import imgUrl5 from "./src/lib/images/days/d5.jpg"
 
     export const titel = "Thuy-Duc \n & Moritz";
     export const imageUrl = "src/lib/images/main1.jpg";
 
     export const specialDays = [
       {
-        image: "src/lib/images/days/d1.jpg",
+        image: imgUrl1,
         title: "01",
         text: "COCKTAIL, AVENUE APP - LINETTE"
       },
       {
-        image: "src/lib/images/days/d2.jpg",
+        image: imgUrl2,
         title: "02",
         text: "COCKTAIL, AVENUE APP - LINETTE"
       },
       {
-        image: "src/lib/images/days/d3.jpg",
+        image: imgUrl3,
         title: "03",
         text: "COCKTAIL, AVENUE APP - LINETTE"
       },
       {
-        image: "src/lib/images/days/d4.jpg",
+        image: imgUrl4,
         title: "04",
         text: "COCKTAIL, AVENUE APP - LINETTE"
       }
       ,
       {
-        image: "src/lib/images/days/d5.jpg",
+        image: imgUrl5,
         title: "05",
         text: "COCKTAIL, AVENUE APP - LINETTE"
       }
