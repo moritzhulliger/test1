@@ -43,7 +43,7 @@
         
             height: 0px;
             flex-grow: 2;
-            border-top: 5px solid black;
+            border-top: 3px solid black;
         }
 
         .subtitle {
@@ -53,7 +53,7 @@
     .container {
       position: relative;
       padding: 15px;
-      border: 1px solid black;
+      border: 3px solid black;
     }
 
     .the-days {

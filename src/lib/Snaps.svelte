@@ -3,6 +3,7 @@
      * @type {string}
      */
      export let snap;
+
 </script>
 
 <div class="image-container">
@@ -12,13 +13,13 @@
 <style lang="scss">
 .image-container {
     position: relative;
-    width: 45%;
+    width: 35%;
     height: 100%;
     overflow: hidden;
-    border: 3px solid black;
-    border-radius: 40% 40% 40% 40%;
+    border: 1px solid black;
+    border-radius: 250px;
     // Adjust the border-radius values as needed
-    margin-bottom: 40px;
+    margin-bottom: 120px;
 
     
     img {
