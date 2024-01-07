@@ -4,23 +4,76 @@
 
     export const titel = "Thuy-Duc \n & Moritz";
     export const imageUrl = "src/lib/images/main1.jpg";
+
+    export const specialDays = [
+      {
+        image: "src/lib/images/days/d1.jpg",
+        title: "01",
+        text: "COCKTAIL, AVENUE APP - LINETTE"
+      },
+      {
+        image: "src/lib/images/days/d2.jpg",
+        title: "02",
+        text: "COCKTAIL, AVENUE APP - LINETTE"
+      },
+      {
+        image: "src/lib/images/days/d3.jpg",
+        title: "03",
+        text: "COCKTAIL, AVENUE APP - LINETTE"
+      },
+      {
+        image: "src/lib/images/days/d4.jpg",
+        title: "04",
+        text: "COCKTAIL, AVENUE APP - LINETTE"
+      }
+      ,
+      {
+        image: "src/lib/images/days/d5.jpg",
+        title: "05",
+        text: "COCKTAIL, AVENUE APP - LINETTE"
+      }
+    ]
 </script>
 
 <Intro/>
-<h1>Our Special Days</h1>
-<SpecialDays/>
+
+<div class="top-liner">
+  <div class="left-line"></div>
+  <div class="subtitle">OUR SPECIAL DAYS</div>
+</div>
+{#each specialDays as {image, title, text}}
+  <SpecialDays image={image} title={title} text={text} />
+{/each}
 
 
 
 
 
-  <style>
+  <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
 
     body {
       background-color: #d2c9bc;
+    } 
+
+    .top-liner {
+        margin: 85px 0 65px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .left-line {
+        
+            height: 0px;
+            flex-grow: 2;
+            border-top: 5px solid black;
+        }
+
+        .subtitle {
+            margin-left: 75px;
+        }
     }
-    
+
     .container {
       position: relative;
       width: 100%;

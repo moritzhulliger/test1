@@ -1,34 +1,65 @@
+<script>
+    /**
+     * @type {any}
+     */
+     export let image;
+    /**
+     * @type {any}
+     */
+     export let title;
+    /**
+     * @type {any}
+     */
+     export let text;
+
+     $: bgImage = `background-image: url("${image}");`;
+
+</script>
+
 <div class="day">
-    <div class="image-container">
-        <img src="/src/lib/images/days/09-35-TTG02004.jpg"/>
-    </div>
     <div class="text-container">
-        <h2>First Course Wedding Dinner, La Coupole</h2>
-        <h3>The dinner was delicious</h3>
-        <p>Your paragraph text goes here.</p>
+        <h2>{title}</h2>
+        <p>{text}</p>
+    </div>
+    <div class="image-container">
+        <div class="image" style={bgImage}>
+        </div>
     </div>
 </div>
 
-<style>
-
+<style lang="scss">
     .day {
         display: grid;
         grid-template-columns: 40% 1fr;
-        height: 15vh;
-        min-height: 250px;
+        margin-bottom: 35px;
+
+        h2 {
+            font-size: 75px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            text-align: center;
+            max-width: 150px;
+        }
     }
 
-    h2, h3 {
-        font-size: large;
-        font-family: 'Playfair Display', serif;
-    }
+
 
 
     .image-container {
+        border: 2px solid black;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding: 20px;
+        padding: 15px;
+
+        .image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+        }
     }
 
     .text-container {
