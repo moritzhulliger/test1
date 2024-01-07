@@ -1,14 +1,12 @@
 <script>
-    import Intro from "$lib/Intro.svelte";
-    import SpecialDays from "$lib/SpecialDays.svelte";
-
     export const titel = "Thuy-Duc \n & Moritz";
     export const imageUrl = "src/lib/images/main1.jpg";
 </script>
 
-<Intro/>
-<h1>Our Special Days</h1>
-<SpecialDays/>
+<div class="container">
+    <img src={imageUrl} class="image" alt=""/>
+    <div class="text">{titel}</div>
+</div>
 
 
 
@@ -17,10 +15,6 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
 
-    body {
-      background-color: #d2c9bc;
-    }
-    
     .container {
       position: relative;
       width: 100%;
