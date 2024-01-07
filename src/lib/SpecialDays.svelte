@@ -40,8 +40,9 @@
         }
 
         p {
-            text-align: center;
-            max-width: 150px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: left;
+            max-width: auto;
         }
     }
 
@@ -67,7 +68,7 @@
     }
 
     img {
-    max-width: 60%;
+    max-width: 100%;
     height: auto;
 }
 </style>

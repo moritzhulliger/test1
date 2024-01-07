@@ -31,6 +31,7 @@
 
     .ido {
         font-family: 'Playfair Display', serif;
+        letter-spacing: 0.1cap;
         text-align: center;
     }
 
@@ -47,6 +48,7 @@
         }
 
         .subtitle {
+            letter-spacing: 1cap;
             margin: 15px 45px;
         }
     }

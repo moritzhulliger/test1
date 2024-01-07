@@ -58,7 +58,7 @@
   <div class="subtitle">THE FOR OF US</div>
 </div>
 <div class="snaps">
-  <h1>FOREVER</h1>
+  <h1>SNAP!</h1>
   {#each snaps as snap}
     <Snaps snap={snap} />
   {/each}
@@ -97,10 +97,11 @@
         
             height: 0px;
             flex-grow: 2;
-            border-top: 5px solid black;
+            border-top: 3px solid black;
         }
 
         .subtitle {
+            letter-spacing: 1cap;
             margin-left: 75px;
         }
     }
