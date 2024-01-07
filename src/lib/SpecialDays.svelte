@@ -34,6 +34,8 @@
         display: grid;
         grid-template-columns: 42% 1fr;
         margin-bottom: 55px;
+        max-width: 834px;
+        flex-grow: 2;
 
         h2 {
             font-size: 75px;
