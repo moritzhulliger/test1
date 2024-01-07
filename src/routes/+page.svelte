@@ -1,6 +1,7 @@
 <script>
     import Intro from "$lib/Intro.svelte";
     import SpecialDays from "$lib/SpecialDays.svelte";
+    import Snaps from "$lib/Snaps.svelte";
 
     export const titel = "Thuy-Duc \n & Moritz";
     export const imageUrl = "src/lib/images/main1.jpg";
@@ -33,6 +34,14 @@
         text: "COCKTAIL, AVENUE APP - LINETTE"
       }
     ]
+
+    export const snaps = [
+      "src/lib/images/days/d2.jpg",
+      "src/lib/images/days/d6.jpg",
+      "src/lib/images/days/d2.jpg",
+      "src/lib/images/days/d1.jpg",
+      "src/lib/images/days/d2.jpg"
+    ]
 </script>
 
 <Intro/>
@@ -44,8 +53,14 @@
 {#each specialDays as {image, title, text}}
   <SpecialDays image={image} title={title} text={text} />
 {/each}
-
-
+<div class="top-liner">
+  <div class="left-line"></div>
+  <div class="subtitle">THE FOR OF US</div>
+</div>
+<h1>FOREVER</h1>
+{#each snaps as snap}
+  <Snaps snap={snap} />
+{/each}
 
 
 
@@ -56,6 +71,14 @@
       background-color: #d2c9bc;
     } 
 
+    h1 {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 5.5rem;
+        font-weight: 100;
+        letter-spacing: 20px;
+    }
+    
     .top-liner {
         margin: 85px 0 65px;
         display: flex;
