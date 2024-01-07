@@ -44,6 +44,7 @@
 
         p {
             font-family: 'Barlow', sans-serif;
+            letter-spacing: 0.1rem;
             text-transform: uppercase;
             text-align: left;
             max-width: auto;

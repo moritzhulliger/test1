@@ -28,8 +28,7 @@
     overflow: hidden;
     border-radius: 50%;
     // Adjust the border-radius values as needed
-    margin-right: 40px;
-    margin-left: 40px;
+    margin: 0 60px;
 
     img {
         display: block;

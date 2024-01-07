@@ -15,6 +15,7 @@
     <div class="right-line"></div>
 </div>
 <h1>{introData.titel}</h1>
+<div class="subheading">live the life you love</div>
 <div class="container">
     <div class="container-image">
         <img src={introData.imageUrl} class="image" alt=""/>
@@ -51,12 +52,21 @@
         font-family: 'Playfair Display', serif;
         font-size: 5.5rem;
         font-weight: 100;
-        letter-spacing: 20px;
+        letter-spacing: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .subheading {
+      text-align: center;
+      text-transform: capitalize;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 0.3rem;
+      margin-bottom: 40px;
     }
 
     .ido {
         font-family: 'Playfair Display', serif;
-        letter-spacing: 0.1cap;
+        letter-spacing: 0.2cap;
         text-align: center;
         margin: 45px 0px;
     }

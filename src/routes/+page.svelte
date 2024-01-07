@@ -142,7 +142,7 @@
         position: relative;
     }
     .map {
-      margin: 50px 0px;
+      margin: 80px 0px;
     }
     .image {
       position: absolute;
