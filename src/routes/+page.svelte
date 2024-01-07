@@ -4,35 +4,48 @@
     import Snaps from "$lib/Snaps.svelte";
     import FamilyMoon from "$lib/FamilyMoon.svelte";
 
-    export const titel = "Thuy-Duc \n & Moritz";
-    export const imageUrl = "src/lib/images/main1.jpg";
+    export const map = "src/lib/images/shokunin_World_Map.svg"
 
     export const specialDays = [
       {
-        image: "src/lib/images/days/d1.jpg",
+        image: "src/lib/images/days/IMG_2600.jpeg",
         title: "01",
         text: "COCKTAIL, AVENUE APP - LINETTE"
       },
       {
         image: "src/lib/images/days/d2.jpg",
         title: "02",
-        text: "COCKTAIL, AVENUE APP - LINETTE"
+        text: "Park Lunch, Eifeltower"
       },
       {
         image: "src/lib/images/days/d3.jpg",
         title: "03",
-        text: "COCKTAIL, AVENUE APP - LINETTE"
+        text: "First, La Coupole"
       },
       {
         image: "src/lib/images/days/d4.jpg",
         title: "04",
-        text: "COCKTAIL, AVENUE APP - LINETTE"
-      }
-      ,
+        text: "Second, Hanoi 1988"
+      },
       {
         image: "src/lib/images/days/d5.jpg",
         title: "05",
-        text: "COCKTAIL, AVENUE APP - LINETTE"
+        text: "Caffé, LouLou"
+      },
+      {
+        image: "src/lib/images/days/IMG_3472.jpg",
+        title: "06",
+        text: "Chin Chin, the Hoxton"
+      },
+      {
+        image: "src/lib/images/days/IMG_3507.jpeg",
+        title: "07",
+        text: "Brunch, Saint Pearl"
+      },
+      {
+        image: "src/lib/images/days/IMG_7148.jpeg",
+        title: "08",
+        text: "Cake, Central Park NYC"
       }
     ]
 
@@ -45,13 +58,34 @@
     ]
 
     export const destinations = [
-      "src/lib/images/familymoon/IMG_6575.jpg",
-      "src/lib/images/familymoon/IMG_7763.jpg",
-      "src/lib/images/familymoon/IMG_7765.jpg",
-      "src/lib/images/familymoon/IMG_8234.jpg",
-      "src/lib/images/familymoon/IMG_8348.jpg",
-      "src/lib/images/familymoon/IMG_8737.jpg",
-      "src/lib/images/familymoon/IMG_8886.jpg"
+      { 
+        image: "src/lib/images/familymoon/IMG_6575.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_7763.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_7765.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_8234.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_8348.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_8737.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_8886.jpg",
+        capture: "singapore"
+      }
     ]
 </script>
 
@@ -66,7 +100,7 @@
 {/each}
 <div class="top-liner">
   <div class="left-line"></div>
-  <div class="subtitle">THE FOR OF US</div>
+  <div class="subtitle">THE FOuR OF US</div>
 </div>
 <div class="snaps">
   <h1>SNAP!</h1>
@@ -80,14 +114,17 @@
 </div>
 <div class="familymoon">
   <h1>Family moon</h1>
-  <div class="wrapper">    
-    {#each destinations as dest}
-      <FamilyMoon dest={dest} />
-    {/each}
+  <div>
+    <img src={map} class="map" alt=""/>
+  </div>
+  <div class="imagebar-container">
+    <div class="wrapper">    
+      {#each destinations as {image, capture}}
+        <FamilyMoon image={image} capture={capture} />
+      {/each}
+    </div>
   </div>
 </div>
-
-
 
 
   <style lang="scss">
@@ -126,6 +163,7 @@
         }
 
         .subtitle {
+            font-family: 'Barlow', sans-serif;
             letter-spacing: 1cap;
             margin-left: 75px;
         }
@@ -141,7 +179,9 @@
     .the-days {
         position: relative;
     }
-  
+    .map {
+      margin: 50px 0px;
+    }
     .image {
       position: absolute;
       top: 0;
@@ -162,9 +202,17 @@
       font-size: 7em;
       font-weight: 100;
     }
+    .imagebar-container {
+      overflow-x: scroll;
+    }
     .wrapper {
         display: flex;
         flex-direction: row;
+        width: fit-content;
+    }
+    .revealUp {
+      opacity: 0;
+      visibility: hidden;
     }
   </style>
   

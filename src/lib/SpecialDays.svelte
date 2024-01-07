@@ -30,17 +30,19 @@
 <style lang="scss">
     .day {
         display: grid;
-        grid-template-columns: 40% 1fr;
-        margin-bottom: 65px;
+        grid-template-columns: 42% 1fr;
+        margin-bottom: 55px;
 
         h2 {
             font-size: 75px;
             font-weight: bold;
             font-family: 'Playfair Display', serif;
+            margin: 20px 0px;
         }
 
         p {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Barlow', sans-serif;
+            text-transform: uppercase;
             text-align: left;
             max-width: auto;
         }

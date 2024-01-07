@@ -2,11 +2,20 @@
     /**
      * @type {string}
      */
-     export let dest;
+     export let image;
+     /**
+     * @type {any}
+     */
+      export let capture;
 
 </script>
-<div class="image-container">
-    <img src={dest}>
+<div class="item-container">
+  <div class="image-container">
+    <img src={image}>
+  </div>
+  <div class="capture">
+    {capture} 
+  </div>
 </div>
 
 <style lang="scss">
@@ -17,10 +26,10 @@
     width: 220px;
     height: 220px;
     overflow: hidden;
-    border: 1px solid black;
     border-radius: 50%;
     // Adjust the border-radius values as needed
-    margin-right: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
 
     img {
         display: block;
@@ -28,5 +37,11 @@
         height: 100%;
         object-fit: cover;
     }
+}
+.capture {
+  font-family: 'Barlow', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 35px 0px;
 }
 </style>
