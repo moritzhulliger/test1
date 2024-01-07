@@ -1,4 +1,6 @@
 <script>
+    import { reveal } from 'svelte-reveal';
+
     /**
      * @type {any}
      */
@@ -16,7 +18,7 @@
 
 </script>
 
-<div class="day">
+<div class="day" use:reveal={{ transition: "fade" }}>
     <div class="text-container">
         <h2>{title}</h2>
         <p>{text}</p>

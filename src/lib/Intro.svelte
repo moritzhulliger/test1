@@ -1,6 +1,12 @@
 <script>
-    export const titel = "Thuy-Duc \n & Moritz";
-    export const imageUrl = "src/lib/images/main1.jpg";
+// @ts-nocheck
+
+    /**
+     * @type {{ any; }}
+     */
+     export let introData;
+
+    console.log(introData)
 </script>
 
 <div class="top-liner">
@@ -8,9 +14,11 @@
     <div class="subtitle">SPECIAL EDITION</div>
     <div class="right-line"></div>
 </div>
-<h1>FOREVER</h1>
+<h1>{introData.titel}</h1>
 <div class="container">
-    <img src={imageUrl} class="image" alt=""/>
+    <div class="container-image">
+        <img src={introData.imageUrl} class="image" alt=""/>
+    </div>
 </div>
 <h2 class="ido">THUY-DUC & MORITZ SAID "I DO"</h2>
 
@@ -52,10 +60,16 @@
             margin: 15px 45px;
         }
     }
-    .container {
+    .container-image {
       position: relative;
       padding: 15px;
       border: 3px solid black;
+      max-width: 1250px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
     }
 
     .the-days {

@@ -1,6 +1,24 @@
+type Familymoon @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  destination: String
+  image: String
+}
+
+type Intro @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  titel: String
+  imageUrl: String
+}
+
+type Snaps @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  snap: AWSURL
+}
+
 type SpecialDayElement @model @auth(rules: [{allow: public}]) {
   id: ID!
   Title: String
   Description: String
   Image: AWSURL
 }
+ 

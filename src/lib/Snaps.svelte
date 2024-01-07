@@ -1,14 +1,17 @@
 <script>
-        import Saos from "saos";
+    import { reveal } from 'svelte-reveal';
+
 
     /**
      * @type {string}
      */
      export let snap;
 
+
+
 </script>
 
-<div class="image-container">
+<div use:reveal={{ transition: "fade" }} class="image-container">
     <img src={snap}>
 </div>  
 

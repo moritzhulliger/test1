@@ -65,13 +65,13 @@
     console.log("daa", data);
 </script>
 
-<Intro/>
+<Intro introData={data.intro.data.listIntros.items[0] }/>
 
 <div class="top-liner">
   <div class="left-line"></div>
   <div class="subtitle">OUR SPECIAL DAYS</div>
 </div>
-{#each data.data.listSpecialDayElements.items as item}
+{#each data.allSpecialDayElements.data.listSpecialDayElements.items as item}
   <SpecialDays image={item.Image} title={item.Title} text={item.Description} />
 {/each}
 <div class="top-liner">

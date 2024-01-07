@@ -1,6 +1,117 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreateFamilymoon = /* GraphQL */ `
+  subscription OnCreateFamilymoon(
+    $filter: ModelSubscriptionFamilymoonFilterInput
+  ) {
+    onCreateFamilymoon(filter: $filter) {
+      id
+      destination
+      image
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateFamilymoon = /* GraphQL */ `
+  subscription OnUpdateFamilymoon(
+    $filter: ModelSubscriptionFamilymoonFilterInput
+  ) {
+    onUpdateFamilymoon(filter: $filter) {
+      id
+      destination
+      image
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteFamilymoon = /* GraphQL */ `
+  subscription OnDeleteFamilymoon(
+    $filter: ModelSubscriptionFamilymoonFilterInput
+  ) {
+    onDeleteFamilymoon(filter: $filter) {
+      id
+      destination
+      image
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onCreateIntro = /* GraphQL */ `
+  subscription OnCreateIntro($filter: ModelSubscriptionIntroFilterInput) {
+    onCreateIntro(filter: $filter) {
+      id
+      titel
+      imageUrl
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateIntro = /* GraphQL */ `
+  subscription OnUpdateIntro($filter: ModelSubscriptionIntroFilterInput) {
+    onUpdateIntro(filter: $filter) {
+      id
+      titel
+      imageUrl
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteIntro = /* GraphQL */ `
+  subscription OnDeleteIntro($filter: ModelSubscriptionIntroFilterInput) {
+    onDeleteIntro(filter: $filter) {
+      id
+      titel
+      imageUrl
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onCreateSnaps = /* GraphQL */ `
+  subscription OnCreateSnaps($filter: ModelSubscriptionSnapsFilterInput) {
+    onCreateSnaps(filter: $filter) {
+      id
+      snap
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateSnaps = /* GraphQL */ `
+  subscription OnUpdateSnaps($filter: ModelSubscriptionSnapsFilterInput) {
+    onUpdateSnaps(filter: $filter) {
+      id
+      snap
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteSnaps = /* GraphQL */ `
+  subscription OnDeleteSnaps($filter: ModelSubscriptionSnapsFilterInput) {
+    onDeleteSnaps(filter: $filter) {
+      id
+      snap
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
 export const onCreateSpecialDayElement = /* GraphQL */ `
   subscription OnCreateSpecialDayElement(
     $filter: ModelSubscriptionSpecialDayElementFilterInput
