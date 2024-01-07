@@ -4,45 +4,10 @@
     import Snaps from "$lib/Snaps.svelte";
     import FamilyMoon from "$lib/Familymoon.svelte";
 
-    import imgUrl1 from "../lib/images/days/d1.jpg"
-    import imgUrl2 from "../lib/images/days/d2.jpg"
-    import imgUrl3 from "../lib/images/days/d3.jpg"
-    import imgUrl4 from "../lib/images/days/d4.jpg"
-    import imgUrl5 from "../lib/images/days/d5.jpg"
+    export const map = "src/lib/images/shokunin_World_Map.svg"
 
-    export const titel = "Thuy-Duc \n ..tz";
-    export const imageUrl = "src/lib/images/main1.jpg";
     export const ssr = false;
     export let data;
-
-    export const specialDays = [
-      {
-        image: imgUrl1,
-        title: "01",
-        text: "COCKTAIL, AVENUE APP - LINETTE"
-      },
-      {
-        image: imgUrl2,
-        title: "02",
-        text: "COCKTAIL, AVENUE APP - LINETTE"
-      },
-      {
-        image: imgUrl3,
-        title: "03",
-        text: "COCKTAIL, AVENUE APP - LINETTE"
-      },
-      {
-        image: imgUrl4,
-        title: "04",
-        text: "COCKTAIL, AVENUE APP - LINETTE"
-      }
-      ,
-      {
-        image: imgUrl5,
-        title: "05",
-        text: "COCKTAIL, AVENUE APP - LINETTE"
-      }
-    ]
 
     export const snaps = [
       "src/lib/images/days/d2.jpg",
@@ -53,13 +18,34 @@
     ]
 
     export const destinations = [
-      "src/lib/images/familymoon/IMG_6575.jpg",
-      "src/lib/images/familymoon/IMG_7763.jpg",
-      "src/lib/images/familymoon/IMG_7765.jpg",
-      "src/lib/images/familymoon/IMG_8234.jpg",
-      "src/lib/images/familymoon/IMG_8348.jpg",
-      "src/lib/images/familymoon/IMG_8737.jpg",
-      "src/lib/images/familymoon/IMG_8886.jpg"
+      { 
+        image: "src/lib/images/familymoon/IMG_6575.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_7763.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_7765.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_8234.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_8348.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_8737.jpg",
+        capture: "singapore"
+      },
+      { 
+        image: "src/lib/images/familymoon/IMG_8886.jpg",
+        capture: "singapore"
+      }
     ]
 
     console.log("daa", data);
@@ -76,7 +62,7 @@
 {/each}
 <div class="top-liner">
   <div class="left-line"></div>
-  <div class="subtitle">THE FOR OF US</div>
+  <div class="subtitle">THE FOuR OF US</div>
 </div>
 <div class="snaps">
   <h1>SNAP!</h1>
@@ -90,14 +76,17 @@
 </div>
 <div class="familymoon">
   <h1>Family moon</h1>
-  <div class="wrapper">    
-    {#each destinations as dest}
-      <FamilyMoon dest={dest} />
-    {/each}
+  <div>
+    <img src={map} class="map" alt=""/>
+  </div>
+  <div class="imagebar-container">
+    <div class="wrapper">    
+      {#each destinations as {image, capture}}
+        <FamilyMoon image={image} capture={capture} />
+      {/each}
+    </div>
   </div>
 </div>
-
-
 
 
   <style lang="scss">
@@ -136,6 +125,7 @@
         }
 
         .subtitle {
+            font-family: 'Barlow', sans-serif;
             letter-spacing: 1cap;
             margin-left: 75px;
         }
@@ -151,7 +141,9 @@
     .the-days {
         position: relative;
     }
-  
+    .map {
+      margin: 50px 0px;
+    }
     .image {
       position: absolute;
       top: 0;
@@ -172,9 +164,17 @@
       font-size: 7em;
       font-weight: 100;
     }
+    .imagebar-container {
+      overflow-x: scroll;
+    }
     .wrapper {
         display: flex;
         flex-direction: row;
+        width: fit-content;
+    }
+    .revealUp {
+      opacity: 0;
+      visibility: hidden;
     }
   </style>
   
