@@ -71,7 +71,7 @@
 </div>
 <div class="familymoon">
   <h1>Family moon</h1>
-  <div>
+  <div class="map-container">
     <img src={map} class="map" alt=""/>
   </div>
   <div class="imagebar-container">

@@ -7,6 +7,7 @@
      export let introData;
 
     console.log(introData)
+    import { reveal } from 'svelte-reveal';
 </script>
 
 <div class="top-liner">
@@ -14,17 +15,17 @@
     <div class="subtitle">SPECIAL EDITION</div>
     <div class="right-line"></div>
 </div>
-<h1>{introData.titel}</h1>
-<div class="subheading">live the life you love</div>
+<h1 use:reveal={{ transition: "slide", delay: 500 }}>{introData.titel}</h1>
+<div class="subheading" use:reveal={{ transition: "slide", delay: 800 }}>live the life you love</div>
 <div class="container">
     <div class="container-image">
         <img src={introData.imageUrl} class="image" alt=""/>
     </div>
 </div>
-<h2 class="ido">THUY-DUC & MORITZ SAID "I DO"</h2>
+<h2 class="ido" use:reveal={{ transition: "fade", delay: 1000 }}>THUY-DUC & MORITZ SAID "I DO"</h2>
 
 <div class="container">
-    <div class="box">
+    <div class="box" use:reveal={{ transition: "slide", delay: 1200 }}>
         <div class="border-bottom text-box bold">We've eloped</div>
         <div class="text-box">
           <div class="greeting">Dear Family and Friends,</div>
@@ -53,10 +54,14 @@
     h1 {
         text-align: center;
         font-family: 'Playfair Display', serif;
-        font-size: 5.5rem;
+        font-size: clamp(3rem, 8vw, 8rem);
         font-weight: 100;
-        letter-spacing: 1.3rem;
+        letter-spacing: clamp(1rem,1.5rem, 2rem);
         margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(1rem, 3vw, 1.5rem);
     }
 
     .subheading {
@@ -69,7 +74,7 @@
 
     .ido {
         font-family: 'Playfair Display', serif;
-        letter-spacing: 0.2cap;
+        letter-spacing: clamp(0.1cap,1vw,0.2cap);
         text-align: center;
         margin: 45px 0px;
     }
@@ -83,7 +88,7 @@
         
             height: 0px;
             flex-grow: 2;
-            border-top: 3px solid black;
+            border-top: 2px solid black;
         }
 
         .subtitle {
@@ -146,6 +151,34 @@
     }
     .greeting{
       margin: 5px 0px;
+    }
+
+    // for typical mobile devices
+    @media only screen and (min-width: 320px) and (max-width: 479px) {
+      //CSS Code
+      h1 {
+
+      }
+    }
+
+    // For mobile (landscape)
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+    //CSS Code
+    }
+
+    // For tablet
+    @media only screen and (min-width: 768px) and (max-width: 979px) {
+    //CSS Code
+    }
+
+    // For small desktop
+    @media only screen and (min-width: 980px) and (max-width: 1023px) {
+    //CSS Code
+    }
+
+    // For typical desktop
+    @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    //CSS Code
     }
   </style>
   
