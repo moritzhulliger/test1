@@ -63,7 +63,7 @@
   <h1>SNAP!</h1>
   <div class="row">
     {#each data.allSnaps.data.listSnaps.items as snap}
-    <div class="col-md-6 col-lg-4 snap-wrapper">
+    <div class="col-6 col-lg-4 snap-wrapper">
       <Snaps snap={snap.snap} />
     </div>
     {/each}
@@ -75,7 +75,7 @@
 </div>
 <div class="familymoon">
   <h1>Family moon</h1>
-  <div>
+  <div class="map-container">
     <img src={map} class="map" alt=""/>
   </div>
   <div class="imagebar-container">
