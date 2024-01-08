@@ -59,11 +59,15 @@
   <div class="left-line"></div>
   <div class="subtitle">THE FOuR OF US</div>
 </div>
-<div class="snaps">
+<div class="snaps container">
   <h1>SNAP!</h1>
-  {#each data.allSnaps.data.listSnaps.items as snap}
-    <Snaps snap={snap.snap} />
-  {/each}
+  <div class="row">
+    {#each data.allSnaps.data.listSnaps.items as snap}
+    <div class="col-md-6 col-lg-4 snap-wrapper">
+      <Snaps snap={snap.snap} />
+    </div>
+    {/each}
+  </div>
 </div>
 <div class="top-liner">
   <div class="left-line"></div>
@@ -82,7 +86,6 @@
     </div>
   </div>
 </div>
-
 
   <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
@@ -104,7 +107,16 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      h1 {
+        margin-bottom: 5.5rem;
+      }
     }
+
+    .snap-wrapper {
+      padding-bottom: 140px;
+    }
+
     .top-liner {
         margin: 85px 0 65px;
         display: flex;
@@ -124,13 +136,6 @@
             letter-spacing: 1cap;
             margin-left: 75px;
         }
-    }
-
-    .container {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 80%; /* 4:5 aspect ratio (5/4 * 100%) */
     }
 
     .the-days {

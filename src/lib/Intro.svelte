@@ -1,12 +1,11 @@
 <script>
 // @ts-nocheck
+import { reveal } from 'svelte-reveal';
 
     /**
      * @type {{ any; }}
      */
      export let introData;
-
-    console.log(introData)
 </script>
 
 <div class="top-liner">
@@ -18,7 +17,7 @@
 <div class="subheading">live the life you love</div>
 <div class="container">
     <div class="container-image">
-        <img src={introData.imageUrl} class="image" alt=""/>
+        <img use:reveal={{ transition: "fade" }} src={introData.imageUrl} class="image" alt=""/>  
     </div>
 </div>
 <h2 class="ido">THUY-DUC & MORITZ SAID "I DO"</h2>
@@ -43,7 +42,6 @@
         </div>
       </div>
 </div>
-
 
   <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');

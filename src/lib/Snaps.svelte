@@ -31,7 +31,7 @@
 
 .image-container {
     position: relative;
-    width: 35%;
+    width: 90%;
     height: 100%;
     overflow: hidden;
     border: 1px solid black;
