@@ -39,6 +39,11 @@
     // Adjust the border-radius values as needed
     margin-bottom: 120px;
 
+    @include media-breakpoint-up(xl) { 
+      width: 90%;
+     }
+
+
     img {
         display: block;
         width: 100%;

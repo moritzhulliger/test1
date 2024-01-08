@@ -63,7 +63,7 @@
   <h1>SNAP!</h1>
   <div class="row">
     {#each data.allSnaps.data.listSnaps.items as snap}
-    <div class="col-6 col-lg-4 snap-wrapper">
+    <div class="col-6 snap-wrapper">
       <Snaps snap={snap.snap} />
     </div>
     {/each}
@@ -73,9 +73,9 @@
   <div class="left-line"></div>
   <div class="subtitle">travel the world</div>
 </div>
-<div class="familymoon">
+<div class="familymoon container">
   <h1>Family moon</h1>
-  <div class="map-container">
+  <div class="map-container row">
     <img src={map} class="map" alt=""/>
   </div>
   <div class="imagebar-container">
@@ -114,7 +114,11 @@
     }
 
     .snap-wrapper {
-      padding-bottom: 140px;
+      padding-bottom: 40px;
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 140px;
+      }
     }
 
     .top-liner {
