@@ -73,10 +73,12 @@
   <div class="left-line"></div>
   <div class="subtitle">travel the world</div>
 </div>
-<div class="familymoon container">
+<div class="familymoon ">
   <h1>Family moon</h1>
-  <div class="map-container row">
-    <img src={map} class="map" alt=""/>
+  <div class="map-container container">
+    <div class="row">
+      <img src={map} class="map" alt=""/>
+    </div>
   </div>
   <div class="imagebar-container">
     <div class="wrapper">    

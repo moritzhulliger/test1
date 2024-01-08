@@ -44,7 +44,7 @@ body {
     height: 100%;
     width: 100%;
     pointer-event: none;
-    z-index: 300;
+    z-index: 0;
     transform: translateZ(0);
     
     &:before {
@@ -56,7 +56,7 @@ body {
       z-index: 9999;
       position: fixed;
       background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
-      opacity: 0.15;
+      opacity: 0.10;
       pointer-events: none;
     }
   }
