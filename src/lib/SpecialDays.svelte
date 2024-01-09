@@ -18,12 +18,12 @@
 
 </script>
 
-<div class="day" use:reveal={{ transition: "fade" }}>
+<div class="day">
     <div class="text-container">
-        <h2>{title}</h2>
-        <p>{text}</p>
+        <h2 use:reveal={{ transition: "fly", delay: 800 }}>{title}</h2>
+        <p use:reveal={{ transition: "fly", delay: 1000 }}>{text}</p>
     </div>
-    <div class="image-container">
+    <div class="image-container" use:reveal={{ transition: "fly", delay: 300 }}>
         <div class="image" style={bgImage}>
         </div>
     </div>
@@ -38,7 +38,7 @@
         flex-grow: 2;
 
         h2 {
-            font-size: 75px;
+            font-size: clamp(3rem, 6vw, 7rem);
             font-weight: bold;
             font-family: 'Playfair Display', serif;
             margin: 20px 0px;
@@ -46,6 +46,7 @@
 
         p {
             font-family: 'Barlow', sans-serif;
+            font-size: clamp(0.8rem, 1vw, 1rem);
             letter-spacing: 0.1rem;
             text-transform: uppercase;
             text-align: left;
