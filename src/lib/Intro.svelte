@@ -16,12 +16,12 @@ import { reveal } from 'svelte-reveal';
 </div>
 <h1 use:reveal={{ transition: "slide", delay: 500 }}>{introData.titel}</h1>
 <div class="subheading" use:reveal={{ transition: "slide", delay: 800 }}>live the life you love</div>
-<div class="container">
+<div class="container" use:reveal={{ transition: "fade", threshold: 0.1, delay: 1000 }}>
     <div class="container-image">
-        <img use:reveal={{ transition: "fade" }} src={introData.imageUrl} class="image" alt=""/>  
+        <img src={introData.imageUrl} class="image" alt=""/>  
     </div>
 </div>
-<h2 class="ido" use:reveal={{ transition: "fade", delay: 1000 }}>THUY-DUC & MORITZ SAID "I DO"</h2>
+<h2 class="ido" use:reveal={{ transition: "fade", delay: 1100 }}>THUY-DUC & MORITZ SAID "I DO"</h2>
 
 <div class="container">
     <div class="box" use:reveal={{ transition: "slide", delay: 1200 }}>
