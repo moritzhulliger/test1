@@ -14,18 +14,19 @@ import { reveal } from 'svelte-reveal';
     <div class="subtitle">SPECIAL EDITION</div>
     <div class="right-line"></div>
 </div>
-<h1 use:reveal={{ transition: "slide", delay: 500 }}>{introData.titel}</h1>
-<div class="subheading" use:reveal={{ transition: "slide", delay: 800 }}>live the life you love</div>
-<div class="container" use:reveal={{ transition: "fade", threshold: 0.1, delay: 1000 }}>
+<h1 use:reveal={{ transition: "slide", delay: 200 }}>{introData.titel}</h1>
+<div class="subheading" use:reveal={{ transition: "slide", delay: 500 }}>live the life you love</div>
+<div class="container" use:reveal={{ transition: "fade", threshold: 0.1, delay: 700 }}>
     <div class="container-image">
         <img src={introData.imageUrl} class="image" alt=""/>  
     </div>
 </div>
-<h2 class="ido" use:reveal={{ transition: "fade", delay: 1100 }}>THUY-DUC & MORITZ SAID "I DO"</h2>
 
-<div class="container">
-    <div class="box" use:reveal={{ transition: "slide", delay: 1200 }}>
-        <div class="border-bottom text-box bold">We've eloped</div>
+<h2 class="ido" use:reveal={{ transition: "slide", delay: 800 }}>THUY-DUC & MORITZ SAID "I DO"</h2>
+
+<div class="container" use:reveal={{ transition: "fade", delay: 900 }}>
+    <div class="box">
+        <div class="bottom-line text-box bold">We've eloped</div>
         <div class="text-box">
           <div class="greeting">Dear Family and Friends,</div>
           <div>
@@ -132,7 +133,7 @@ import { reveal } from 'svelte-reveal';
       max-width: 830px;
       border: 2px solid black; 
     }
-    .border-bottom
+    .bottom-line
     {
       border-bottom: 2px solid black;
     }

@@ -11,7 +11,7 @@
 
 </script>
 
-<div use:reveal={{ transition: "fade" }} class="image-container">
+<div use:reveal={{ transition: "fly", delay: '300' }} class="image-container">
     <img src={snap}>
 </div>  
 
