@@ -2,6 +2,7 @@
     import { dragscroll } from '@svelte-put/dragscroll';
 
     import Intro from "$lib/Intro.svelte";
+    import LangSelect from "$lib/i18n/LangSelect.svelte"
     import SpecialDays from "$lib/SpecialDays.svelte";
     import Snaps from "$lib/Snaps.svelte";
     import FamilyMoon from "$lib/Familymoon.svelte";
@@ -44,7 +45,7 @@
 
     console.log("daa", data);
 </script>
-
+<LangSelect />
 <Intro introData={data.intro.data.listIntros.items[0] }/>
 
 <div class="top-liner">
@@ -270,7 +271,9 @@
 
     .special-days-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
   </style>
   

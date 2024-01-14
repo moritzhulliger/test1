@@ -6,6 +6,10 @@ export async function load() {
         query: listSpecialDayElements
     });
 
+    const sortedItems = allSpecialDayElements.data.listSpecialDayElements.items.sort((/** @type {{ Title: string; }} */ a, /** @type {{ Title: any; }} */ b) => {
+        return a.Title.localeCompare(b.Title); 
+      });
+
     const allSnaps = await client.graphql({
         query: listSnaps
     });

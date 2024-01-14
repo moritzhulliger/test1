@@ -2,6 +2,9 @@
 // @ts-nocheck
 import { reveal } from 'svelte-reveal';
 
+import { t, locale, locales } from "./i18n/i18n";
+
+
     /**
      * @type {{ any; }}
      */
@@ -28,19 +31,12 @@ import { reveal } from 'svelte-reveal';
     <div class="box">
         <div class="bottom-line text-box bold">We've eloped</div>
         <div class="text-box">
-          <div class="greeting">Dear Family and Friends,</div>
-          <div>
-            We're thrilled to share the joyous news that Thuy-Duc and Moritz have eloped! In an intimate celebration of our relationship, we embarked on a unique journey, breaking away from tradition.
           
-            From studying together to graduating and working side by side multiple times, we've crafted our own story.  In the meantime, we've formed our own family with the two coolest kids. Growing up together has bonded us more than any vow ever could.
-            At first, we hadn't considered getting married. However, during the challenges of the pandemic, we decided to tie the knot.
-            
-            While we missed having all of you physically present, your love and support mean the world to us.
-            
-            We are looking forward to gathering with all of you to share stories, laughter, and the joy of our union.
-            Thank you for being a part of our lives.
+          <div class="greeting">{$t("intro.welcome.title")}</div>
+          <div>
+            {$t('intro.welcome.text')}
           </div>
-          <div class="greeting">With love</div>
+          <div class="greeting">{$t('intro.welcome.text')}</div>
         </div>
       </div>
 </div>

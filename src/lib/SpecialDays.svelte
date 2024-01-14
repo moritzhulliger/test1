@@ -35,8 +35,8 @@
         grid-template-columns: 42% 1fr;
         margin-bottom: 55px;
         max-width: 834px;
-        flex-grow: 2;
-
+        width: 100%;
+        
         h2 {
             font-size: clamp(3rem, 6vw, 7rem);
             font-weight: bold;
