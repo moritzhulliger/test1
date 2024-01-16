@@ -2,15 +2,14 @@
     import { setLang } from "./i18n";
   
     let showOverlay = true;
-    let selectedLang = "en"; // Default language
   
-    const toggleOverlay = () => {
-      showOverlay = !showOverlay;
+    const closeOverlay = () => {
+      showOverlay = false;
     };
   
-    const changeLanguage = (lang) => {
+    const changeLanguage = (/** @type {string} */ lang) => {
       setLang(lang);
-      toggleOverlay();
+      closeOverlay();
     };
   </script>
   
