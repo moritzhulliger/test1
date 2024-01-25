@@ -1,6 +1,9 @@
 <script>
+// @ts-nocheck
+
     import { setLang } from "./i18n";
-  
+    import { reveal } from 'svelte-reveal';
+
     let showOverlay = true;
   
     const closeOverlay = () => {
@@ -20,12 +23,12 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for the overlay */
+      background: rgba(0, 0, 0, 0.5); 
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center;  
       z-index: 1000;
-      backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+      backdrop-filter: blur(25px); 
     }
   
     .lang-options {
@@ -36,25 +39,35 @@
   
     .lang-option {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1rem, 4vw, 4rem);
-
-      padding: 10px;
+      font-size: clamp(.5rem, 2vw, 2rem);
+      font-weight: 100;
+      margin: 10px;
+      padding-bottom: 5px;
+      letter-spacing: .2rem;
       cursor: pointer;
       color: white;
     }
   
     .lang-option:hover {
-        transform: scale(1.1)
+        border-bottom: 1px solid white;
     }
   </style>
   
   {#if showOverlay}
-    <div class="overlay" on:click={toggleOverlay}>
+    <div class="overlay" on:click={closeOverlay}>
       <div class="lang-options" on:click={(e) => e.stopPropagation()}>
-        <div class="lang-option" on:click={() => changeLanguage("de")}>Deutsch</div>
-        <div class="lang-option" on:click={() => changeLanguage("vn")}>Tiếng Việt</div>
-        <div class="lang-option" on:click={() => changeLanguage("fr")}>Francais</div>
-        <div class="lang-option" on:click={() => changeLanguage("en")}>English</div>
+        <div use:reveal={{ transition: "slide", delay: 200 }} >
+          <div class="lang-option" on:click={() => changeLanguage("de")}>Deutsch</div>
+        </div>
+        <div use:reveal={{ transition: "slide", delay: 200 }} >
+          <div class="lang-option" on:click={() => changeLanguage("vn")}>Tiếng Việt</div>
+        </div>
+        <div use:reveal={{ transition: "slide", delay: 200 }} >
+          <div class="lang-option" on:click={() => changeLanguage("fr")}>Francais</div>
+        </div>
+        <div use:reveal={{ transition: "slide", delay: 200 }} >
+          <div class="lang-option" on:click={() => changeLanguage("en")}>English</div>
+        </div>
       </div>
     </div>
   {/if}

@@ -92,7 +92,7 @@
     </div>
   </div>
   <div use:dragscroll class="imagebar-container">
-    <div class="wrapper">    
+    <div  class="wrapper">    
       {#each destinations as {image, capture}}
         <FamilyMoon image={image} capture={capture} />
       {/each}
@@ -256,8 +256,8 @@
       scrollbar-width: none;  /* Firefox */
 
       &::-webkit-scrollbar {
-        display: none;
-      }
+      display: none; /* Webkit: Hide scrollbar */
+    }
     }
     .wrapper {
         display: flex;

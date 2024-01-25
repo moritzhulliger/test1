@@ -1,4 +1,6 @@
 <script>
+    import Modal from "./Modal.svelte";
+
     /**
      * @type {string}
      */
@@ -8,14 +10,19 @@
      */
       export let capture;
 
+      let showModal = false;
+
 </script>
 <div class="item-container">
-  <div class="image-container">
+  <div class="image-container" on:click={() => (showModal = true)}>
     <img src={image}>
   </div>
   <div class="capture">
     {capture} 
   </div>
+  <Modal bind:showModal>
+    <div class="img" style="background-image: url({image}); width: 100vw; height: 100vh; background-size: contain; overflow: hidden;"></div>
+  </Modal>
 </div>
 
 <style lang="scss">
@@ -36,6 +43,8 @@
         height: 100%;
         object-fit: cover;
     }
+
+
 }
 .capture {
   font-family: 'Barlow', sans-serif;
