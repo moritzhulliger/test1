@@ -21,7 +21,7 @@
     {capture} 
   </div>
   <Modal bind:showModal>
-    <div class="img" style="background-image: url({image}); width: 100vw; height: 100vh; background-size: contain; overflow: hidden;"></div>
+    <img src={image} style="max-width: 90vw; max-height: 90vh; object-fit: contain;">
   </Modal>
 </div>
 

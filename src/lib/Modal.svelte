@@ -17,24 +17,35 @@
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
->	<slot />
-
-
+>	
+	<div class="content">
+		<slot />
+	</div>
 </dialog>
 
 <style>
-
 	dialog {
-		max-width: 90vw;
-		border-radius: 0.2em;
-		border: none;
 		padding: 0;
+		border: none;
+		background-color: rgba(0, 0, 0, 0.7);
+		justify-content: center;
+		align-items: center;
+	}
+
+	.content {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		max-width: 90vw;
+		max-height: 90vh;
+		object-fit: contain;
 	}
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.3);
-	}
-	dialog > div {
-        
 	}
 	dialog[open] {
 		animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -58,7 +69,4 @@
 			opacity: 1;
 		}
 	}
-	img {
-        width: 100%;
-    }
 </style>

@@ -64,6 +64,12 @@
         align-items: center;
         padding: 15px;
 
+        &::before {
+            content: "";
+            display: block;
+            padding-bottom: 66%; 
+        }
+
         .image {
             width: 100%;
             height: 100%;

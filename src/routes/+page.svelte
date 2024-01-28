@@ -43,7 +43,7 @@
       }
     ]
 
-    console.log("daa", data);
+    console.log("daa", data.moons.data.listFamilymoons);
 </script>
 <LangSelect />
 <Intro introData={data.intro.data.listIntros.items[0] }/>
@@ -93,8 +93,8 @@
   </div>
   <div use:dragscroll class="imagebar-container">
     <div  class="wrapper">    
-      {#each destinations as {image, capture}}
-        <FamilyMoon image={image} capture={capture} />
+      {#each data.moons.data.listFamilymoons.items as {image, destination}}
+        <FamilyMoon image={image} capture={destination} />
       {/each}
     </div>
   </div>

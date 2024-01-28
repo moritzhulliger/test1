@@ -1,4 +1,4 @@
-import { listSpecialDayElements, listSnaps, listIntros } from "../graphql/queries";
+import { listSpecialDayElements, listSnaps, listIntros, listFamilymoons } from "../graphql/queries";
 import { client } from "$lib";
 
 export async function load() {
@@ -17,5 +17,10 @@ export async function load() {
     const intro = await client.graphql({
         query: listIntros
     });
-	return { allSpecialDayElements, allSnaps, intro };
+
+    const moons = await client.graphql({
+        query: listFamilymoons
+    })
+    
+	return { allSpecialDayElements, allSnaps, intro, moons };
 }
