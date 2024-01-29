@@ -42,9 +42,8 @@
         capture: "singapore"
       }
     ]
-
-    console.log("daa", data.moons.data.listFamilymoons);
 </script>
+<div class="grain"></div>
 <LangSelect />
 <Intro introData={data.intro.data.listIntros.items[0] }/>
 
