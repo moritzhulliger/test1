@@ -1,5 +1,6 @@
 <script>
     import { dragscroll } from '@svelte-put/dragscroll';
+    import { onMount } from 'svelte';
 
     import Intro from "$lib/Intro.svelte";
     import LangSelect from "$lib/i18n/LangSelect.svelte"
@@ -42,9 +43,13 @@
         capture: "singapore"
       }
     ]
+
+
+    let ready = false;
+    onMount(() => ready = true);
 </script>
-<div class="grain"></div>
 <LangSelect />
+{#if ready}
 <Intro introData={data.intro.data.listIntros.items[0] }/>
 
 <div class="top-liner">
@@ -98,10 +103,23 @@
     </div>
   </div>
 </div>
+{:else}
+ <div class="loader"></div>
+{/if}
 
   <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
 
+    .loader {
+      position: absolute;
+      top: calc(50% - 10px);
+      left: calc(50% - 10px);
+      width: 20px;
+      aspect-ratio: 4;
+      background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% no-repeat;
+      animation: l2 1s steps(3) infinite;
+    }
+    @keyframes l2 {to{background-position: 150%}}
     body {
       background-color: #d2c9bc;
     } 

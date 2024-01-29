@@ -4,10 +4,14 @@
     import { setLang } from "./i18n";
     import { reveal } from 'svelte-reveal';
 
-    let showOverlay = true;
+    let showOverlay = false;
   
     const closeOverlay = () => {
       showOverlay = false;
+    };
+
+    const openOverlay = () => {
+      showOverlay = true;
     };
   
     const changeLanguage = (/** @type {string} */ lang) => {
@@ -17,18 +21,14 @@
   </script>
   
   <style>
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); 
+    .lang-select {
+      position: absolute;
+      bottom: 100%;
+      right: 0;
       display: flex;
       justify-content: center;
       align-items: center;  
       z-index: 1000;
-      backdrop-filter: blur(25px); 
     }
   
     .lang-options {
@@ -39,11 +39,16 @@
   
     .lang-option {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(.5rem, 2vw, 2rem);
+      font-size: clamp(.25rem, 1vw, 1rem);
       font-weight: 100;
       letter-spacing: .2rem;
       cursor: pointer;
-      color: white;
+      color: rgb(0, 0, 0);
+      transition: all 1s ease-in-out;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.774);
+      }
     }
  
 
@@ -56,17 +61,6 @@
       padding: 0 6px;
     }
 
-    a::before {
-      content: '';
-      background-color: hsla(0, 14%, 91%, 0.75);
-      position: absolute;
-      left: 0;
-      bottom: 3px;
-      width: 100%;
-      height: 6px;
-      z-index: -1;
-      transition: all .6s ease-in-out;
-    }
 
     a:hover::before {
       bottom: 0;
@@ -75,26 +69,42 @@
     }
 
     .lala {
-      padding-bottom: 25px;
+      padding-bottom: 5px;
+    }
+    
+    .lang-reveal {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-image: url('./../images/lang-sel.svg');
+      width: 35px;
+      height: 35px;
+      color: white;
+      cursor: pointer;
+      background-size: contain;
     }
   </style>
   
-  {#if showOverlay}
-    <div class="overlay">
-      <div class="lang-options" on:click={(e) => e.stopPropagation()}>
-        <div class="lala">
-          <a class="lang-option" on:click={() => changeLanguage("de")}>Deutsch</a>
+
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div class="lang-reveal" on:click={openOverlay}>
+    {#if showOverlay}
+    <div class="lang-select">
+      <div class="lang-options" >
+        <div class="lala" use:reveal={{ transition: "slide", delay: 1500 }}>
+          <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("de")}>Deutsch</a>
         </div>
-        <div  class="lala">
-          <a class="lang-option" id="style-2" data-replace="Tiếng Việt" on:click={() => changeLanguage("vn")}><span>Tiếng Việt</span></a>
+        <div  class="lala" use:reveal={{ transition: "slide", delay: 1000 }}>
+          <a class="lang-option" id="style-2" data-replace="Tiếng Việt" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("vn")}><span>Tiếng Việt</span></a>
         </div>
-        <div class="lala">
-          <a class="lang-option" on:click={() => changeLanguage("fr")}>Francais</a>
+        <div class="lala" use:reveal={{ transition: "slide", delay: 500 }}>
+          <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("fr")}>Francais</a>
         </div>
-        <div class="lala">
-          <a class="lang-option" on:click={() => changeLanguage("en")}>English</a>
+        <div class="lala"  use:reveal={{ transition: "slide", delay: 0 }}>
+          <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("en")}>English</a>
         </div>
       </div>
     </div>
   {/if}
+  </div>
     
