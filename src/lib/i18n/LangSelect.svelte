@@ -63,34 +63,35 @@
       left: 0;
       bottom: 3px;
       width: 100%;
-      height: 0px;
+      height: 6px;
       z-index: -1;
-      transition: all .3s ease-in-out;
+      transition: all .6s ease-in-out;
     }
 
     a:hover::before {
       bottom: 0;
       height: 100%;
+      transition: all .2s ease;
     }
 
     .lala {
-      padding-bottom: 15px;
+      padding-bottom: 25px;
     }
   </style>
   
   {#if showOverlay}
     <div class="overlay">
       <div class="lang-options" on:click={(e) => e.stopPropagation()}>
-        <div class="lala" use:reveal={{ transition: "slide", delay: 200 }} >
+        <div class="lala">
           <a class="lang-option" on:click={() => changeLanguage("de")}>Deutsch</a>
         </div>
-        <div  class="lala" use:reveal={{ transition: "slide", delay: 200 }} >
+        <div  class="lala">
           <a class="lang-option" id="style-2" data-replace="Tiếng Việt" on:click={() => changeLanguage("vn")}><span>Tiếng Việt</span></a>
         </div>
-        <div class="lala" use:reveal={{ transition: "slide", delay: 200 }} >
+        <div class="lala">
           <a class="lang-option" on:click={() => changeLanguage("fr")}>Francais</a>
         </div>
-        <div class="lala" use:reveal={{ transition: "slide", delay: 200 }} >
+        <div class="lala">
           <a class="lang-option" on:click={() => changeLanguage("en")}>English</a>
         </div>
       </div>
