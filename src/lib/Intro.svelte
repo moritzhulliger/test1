@@ -27,7 +27,7 @@ import { t, locale, locales } from "./i18n/i18n";
 
 <h2 class="ido" use:reveal={{ transition: "slide", delay: 800 }}>THUY-DUC & MORITZ SAID "I DO"</h2>
 
-<div class="container" use:reveal={{ transition: "fade", delay: 900 }}>
+<div class="container" use:reveal={{ transition: "fade", delay: 900, threshold: .5 }}>
     <div class="box">
         <div class="bottom-line text-box bold">We've eloped</div>
         <div class="text-box">
@@ -49,10 +49,10 @@ import { t, locale, locales } from "./i18n/i18n";
     h1 {
         text-align: center;
         font-family: 'Playfair Display', serif;
-        font-size: clamp(3rem, 8vw, 8rem);
+        font-size: clamp(2.5rem, 8vw, 8rem);
         font-weight: 100;
         letter-spacing: clamp(1rem,1.5rem, 2rem);
-        margin-bottom: 10px;
+        margin: 0 15px 10px;
     }
 
     h2 {
@@ -89,7 +89,11 @@ import { t, locale, locales } from "./i18n/i18n";
         .subtitle {
             font-family: 'Barlow', sans-serif;
             letter-spacing: 1cap;
-            margin: 15px 45px;
+
+            @include media-breakpoint-up(lg) { 
+              margin: 25px 45px;
+            }
+            margin: 25px 15px;
         }
     }
     .container-image {

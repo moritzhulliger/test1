@@ -127,7 +127,7 @@
     h1 {
         text-align: center;
         font-family: 'Playfair Display', serif;
-        font-size: clamp(3rem, 5.5rem, 5.5rem);
+        font-size: clamp(3rem, 10vw, 5.5rem);
         font-weight: 100;
         letter-spacing: 20px;
         text-transform: uppercase;
@@ -291,6 +291,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-right: 15px;
     }
   </style>
   

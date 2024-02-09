@@ -30,12 +30,16 @@
 .image-container {
     position: relative;
     overflow: scroll;
-    width: 220px;
-    height: 220px;
+    width: clamp(140px, 4vw, 420px);
+    height: clamp(140px, 4vw, 420px);
     overflow: hidden;
     border-radius: 50%;
     // Adjust the border-radius values as needed
-    margin: 0 60px;
+    margin: 0 30px;
+
+    @include media-breakpoint-up(lg) { 
+      margin: 0 60px;
+    }
 
     img {
         display: block;

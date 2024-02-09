@@ -39,13 +39,15 @@
   
     .lang-option {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(.25rem, 1vw, 1rem);
+      font-size: clamp(1.25rem, 1.5vw, 2rem);
       font-weight: 100;
       letter-spacing: .2rem;
       cursor: pointer;
       color: rgb(0, 0, 0);
       transition: all 1s ease-in-out;
-
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, .7);
+      
       &:hover {
         color: rgba(0, 0, 0, 0.774);
       }
@@ -79,9 +81,10 @@
       background-image: url('./../images/lang-sel.svg');
       width: 35px;
       height: 35px;
-      color: white;
       cursor: pointer;
       background-size: contain;
+
+      z-index: 10000;
     }
   </style>
   
