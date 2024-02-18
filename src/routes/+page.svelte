@@ -44,12 +44,22 @@
       }
     ]
 
+    let height = 10;
+    let top = 120;
 
     let ready = false;
-    onMount(() => ready = true);
+
+    setTimeout(() => {
+      height += 300;
+      top -= 100;
+    }, 0);
+
+    setTimeout(() => {
+      ready = true;
+    }, 1000);
 </script>
-<LangSelect />
 {#if ready}
+<LangSelect />
 <Intro introData={data.intro.data.listIntros.items[0] }/>
 
 <div class="top-liner">
@@ -104,7 +114,19 @@
   </div>
 </div>
 {:else}
- <div class="loader"></div>
+<div class="loader">
+  <div class="glass">
+    <div class="champagne" style="height: {height}px; top: {top}px">
+      <div class="bubbles"> </div>
+      <div class="bubbles two"> </div>
+      <div class="bubbles three"> </div>
+      <div class="bubbles four"> </div>
+      <div class="bubbles five"> </div>
+      <div class="bubbles six"> </div>
+    </div>
+  </div>
+  <div class="stand"></div>
+</div>
 {/if}
 
   <style lang="scss">
@@ -112,14 +134,100 @@
 
     .loader {
       position: absolute;
-      top: calc(50% - 10px);
-      left: calc(50% - 10px);
-      width: 20px;
-      aspect-ratio: 4;
-      background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% no-repeat;
-      animation: l2 1s steps(3) infinite;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    @keyframes l2 {to{background-position: 150%}}
+
+    
+    .tap {
+      position: absolute;
+      top: -100px; left: 16px;
+      width: 20px;
+      height: 100px;
+      background: #FBD78D;
+      animation: 2s wave ease infinite;
+    }
+
+    .glass {
+      overflow: hidden;
+      position: absolute;
+      width: 50px;
+      height: 130px;
+      border: 2px solid #FFF;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .stand:before {
+      content: '';
+      position: absolute;
+      top: 132px; left: 25px;
+      width: 3px;
+      height: 110px;
+      background: #FFF;
+    }
+
+    .stand:after {
+      content: '';
+      position: absolute;
+      top: 241px; left: 6px;
+      width: 40px;
+      height: 2px;
+      background: #FFF;
+    }
+
+    .champagne {
+      position: absolute;
+      width: 50px;
+      background: #FBD78D;
+
+      transition: height .5s ease, top .5s ease;
+    }
+
+    .bubbles {
+      position: absolute;
+      top: -3px;
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      border: 1px solid #FFF;
+    }
+
+    .bubbles.two {
+      top: 0;
+      left: 10px;
+      
+    }
+
+    .bubbles.three {
+      top: 5px;
+      left: 20px;
+      
+    }
+
+    .bubbles.four {
+      top: 0;
+      left: 30px;
+      
+    }
+
+    .bubbles.five {
+      top: 85px;
+      left: 40px;
+      animation: 10s move ease infinite;
+      opacity: 0.7;
+    }
+
+    .bubbles.six {
+      top: 5px;
+      left: 40px;
+    }
+
+    @keyframes move {
+      100% { top: -10px; opacity: 0; }
+    }
+
     body {
       background-color: #d2c9bc;
     } 
@@ -243,9 +351,6 @@
         -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .5);
         -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .5);
         box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-        -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-        -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-      box-shadow: inset -1px 1px 2px hsla(0, 0, 0, .5);
     } 
     .image {
       position: absolute;
