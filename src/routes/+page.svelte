@@ -44,21 +44,8 @@
       }
     ]
 
-    let height = 10;
-    let top = 120;
 
-    let ready = false;
-
-    setTimeout(() => {
-      height += 300;
-      top -= 100;
-    }, 0);
-
-    setTimeout(() => {
-      ready = true;
-    }, 1000);
 </script>
-{#if ready}
 <LangSelect />
 <Intro introData={data.intro.data.listIntros.items[0] }/>
 
@@ -101,6 +88,16 @@
           <div class="marker hanoi"></div>
           <div class="marker bali"></div>
           <div class="marker singapore"></div>
+          <div class="marker paris"></div>
+          <div class="marker london"></div>
+          <div class="marker iceland"></div>
+          <div class="marker danang"></div>
+          <div class="marker hcmc"></div>          
+          <div class="marker paris"></div>
+          <div class="marker london"></div>
+          <div class="marker iceland"></div>
+          <div class="marker danang"></div>
+          <div class="marker hcmc"></div>
         </div>
       </div>
     </div>
@@ -113,21 +110,7 @@
     </div>
   </div>
 </div>
-{:else}
-<div class="loader">
-  <div class="glass">
-    <div class="champagne" style="height: {height}px; top: {top}px">
-      <div class="bubbles"> </div>
-      <div class="bubbles two"> </div>
-      <div class="bubbles three"> </div>
-      <div class="bubbles four"> </div>
-      <div class="bubbles five"> </div>
-      <div class="bubbles six"> </div>
-    </div>
-  </div>
-  <div class="stand"></div>
-</div>
-{/if}
+
 
   <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
@@ -322,6 +305,32 @@
       left: 82%;
       top: 57%;
     }
+
+    .london {
+      left: 47%;
+      top: 22%;
+    }
+
+    .iceland {
+      left: 42%;
+      top: 18%;
+    }
+
+    .danang {
+      left: 85%;
+      top: 51%;
+    }
+
+    .hcmc {
+      left: 84%;
+      top: 55%;
+    }
+
+    .paris {
+      left: 48%;
+      top: 26%;
+    }
+
     .marker {
       transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
       transform-origin: 50% 50%;
