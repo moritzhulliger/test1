@@ -30,8 +30,8 @@
 .image-container {
     position: relative;
     overflow: scroll;
-    width: clamp(140px, 4vw, 420px);
-    height: clamp(140px, 4vw, 420px);
+    width: clamp(240px, 4vw, 420px);
+    height: clamp(240px, 4vw, 420px);
     overflow: hidden;
     border-radius: 50%;
     // Adjust the border-radius values as needed

@@ -134,7 +134,7 @@
       <div class="background-circle"></div>
     </div>
     {#if showOverlay}
-      <div class="lang-select" use:reveal={{ transition: "slide", delay: 500   }}>
+      <div class="lang-select" use:reveal={{ transition: "slide", delay: 200   }}>
         <div class="lang-options" >
           <div class="lala">
             <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("de")}>DE</a>

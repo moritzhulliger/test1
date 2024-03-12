@@ -45,6 +45,7 @@
     ]
 
 
+
 </script>
 <LangSelect />
 <Intro introData={data.intro.data.listIntros.items[0] }/>
@@ -394,6 +395,7 @@
         display: flex;
         flex-direction: row;
         width: fit-content;
+        margin-left: -75px;
     }
     .revealUp {
       opacity: 0;
