@@ -11,6 +11,7 @@
     };
 
     const openOverlay = () => {
+      console.log("SHOW OVERLAY")
       showOverlay = true;
     };
   
@@ -80,40 +81,77 @@
       }
     }
     
-    .lang-reveal {
+    .lang-container {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-image: url('./../images/lang-sel.svg');
       width: 35px;
       height: 35px;
+
+
+    }
+
+    .lalaland {
+      height: 100%;
+      transition: all .3s ease-in-out;
+      &:hover { 
+        transform: scale(1.05); 
+      }
+    }
+
+    .lang-reveal {
+      position: absolute;
+      mask-image: url('./../images/lang-sel.svg');
+      width: 100%;
+      height:100%;
+      left: 10%;
+      top: 10%;
+
       cursor: pointer;
       background-size: contain;
-
+      background-color: white;
       z-index: 10000;
+    }
+
+    .background-circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      border-radius: 50%;
+      width: 120%;
+      height: 120%;
+      background-color: black;
     }
   </style>
   
 
   <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div class="lang-reveal" on:click={openOverlay}>
+  <div class="lang-container" on:click={openOverlay}>
+    <div class="lalaland">
+      <div class="lang-reveal"></div>
+      <div class="background-circle"></div>
+    </div>
     {#if showOverlay}
-    <div class="lang-select" use:reveal={{ transition: "slide", delay: 500   }}>
-      <div class="lang-options" >
-        <div class="lala">
-          <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("de")}>DE</a>
-        </div>
-        <div  class="lala">
-          <a class="lang-option" id="style-2" data-replace="Tiếng Việt" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("vn")}><span>VN</span></a>
-        </div>
-        <div class="lala">
-          <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("fr")}>FR</a>
-        </div>
-        <div class="lala">
-          <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("en")}>EN</a>
+      <div class="lang-select" use:reveal={{ transition: "slide", delay: 500   }}>
+        <div class="lang-options" >
+          <div class="lala">
+            <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("de")}>DE</a>
+          </div>
+          <div  class="lala">
+            <a class="lang-option" id="style-2" data-replace="Tiếng Việt" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("vn")}><span>VN</span></a>
+          </div>
+          <div class="lala">
+            <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("fr")}>FR</a>
+          </div>
+          <div class="lala">
+            <a class="lang-option" on:click={(e) => e.stopPropagation()} on:click={() => changeLanguage("en")}>EN</a>
+          </div>
         </div>
       </div>
-    </div>
-  {/if}
+    {/if}
   </div>
+
+
     
