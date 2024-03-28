@@ -1,3 +1,10 @@
+type RSVP @model {
+  id: ID!
+  Name: String
+  numberofpeople: Int
+  email: AWSEmail
+}
+
 type Familymoon @model @auth(rules: [{allow: public}]) {
   id: ID!
   destination: String

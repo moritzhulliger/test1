@@ -7,6 +7,7 @@
     import SpecialDays from "$lib/SpecialDays.svelte";
     import Snaps from "$lib/Snaps.svelte";
     import FamilyMoon from "$lib/Familymoon.svelte";
+    import Rsvp from '$lib/Rsvp.svelte';
 
     export const map = "src/lib/images/shokunin_World_Map.svg"
 
@@ -110,6 +111,7 @@
       {/each}
     </div>
   </div>
+  <Rsvp />
 </div>
 
 

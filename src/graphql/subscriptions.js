@@ -1,6 +1,45 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreateRSVP = /* GraphQL */ `
+  subscription OnCreateRSVP($filter: ModelSubscriptionRSVPFilterInput) {
+    onCreateRSVP(filter: $filter) {
+      id
+      Name
+      numberofpeople
+      email
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateRSVP = /* GraphQL */ `
+  subscription OnUpdateRSVP($filter: ModelSubscriptionRSVPFilterInput) {
+    onUpdateRSVP(filter: $filter) {
+      id
+      Name
+      numberofpeople
+      email
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteRSVP = /* GraphQL */ `
+  subscription OnDeleteRSVP($filter: ModelSubscriptionRSVPFilterInput) {
+    onDeleteRSVP(filter: $filter) {
+      id
+      Name
+      numberofpeople
+      email
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
 export const onCreateFamilymoon = /* GraphQL */ `
   subscription OnCreateFamilymoon(
     $filter: ModelSubscriptionFamilymoonFilterInput

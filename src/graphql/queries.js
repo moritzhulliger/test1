@@ -1,6 +1,40 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const getRSVP = /* GraphQL */ `
+  query GetRSVP($id: ID!) {
+    getRSVP(id: $id) {
+      id
+      Name
+      numberofpeople
+      email
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const listRSVPS = /* GraphQL */ `
+  query ListRSVPS(
+    $filter: ModelRSVPFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listRSVPS(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        Name
+        numberofpeople
+        email
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;
 export const getFamilymoon = /* GraphQL */ `
   query GetFamilymoon($id: ID!) {
     getFamilymoon(id: $id) {
