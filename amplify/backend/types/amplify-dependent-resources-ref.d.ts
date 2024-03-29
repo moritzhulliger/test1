@@ -6,17 +6,6 @@ export type AmplifyDependentResourcesAttributes = {
       "GraphQLAPIKeyOutput": "string"
     }
   },
-  "auth": {
-    "elope": {
-      "AppClientID": "string",
-      "AppClientIDWeb": "string",
-      "IdentityPoolId": "string",
-      "IdentityPoolName": "string",
-      "UserPoolArn": "string",
-      "UserPoolId": "string",
-      "UserPoolName": "string"
-    }
-  },
   "storage": {
     "s3elopestorage45bad612": {
       "BucketName": "string",

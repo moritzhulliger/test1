@@ -4,7 +4,7 @@ import { generateClient } from 'aws-amplify/api';
 
 const config = {
     "aws_project_region": "eu-north-1",
-    "aws_cognito_identity_pool_id": "eu-north-1:f9f8e691-fd5d-4b9c-a5e1-d04a261083b8",
+    "aws_cognito_identity_pool_id": "eu-north-1:e5c090ae-3b9c-4487-bdf9-133142894522",
     "aws_cognito_region": "eu-north-1",
     "aws_user_pools_id": "eu-north-1_S8yLIHJ4J",
     "aws_user_pools_web_client_id": "5ff25k84fnd24dl91m529v6c4v",
@@ -38,6 +38,5 @@ const config = {
     "aws_appsync_apiKey": "da2-ocw5gxbz2jafbcre3ihfrzwleq"
   };
   
-Amplify.configure(config);
-
+Amplify.configure(config); 
 export const client = generateClient();

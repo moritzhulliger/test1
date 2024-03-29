@@ -1,6 +1,7 @@
 <script>
     import { dragscroll } from '@svelte-put/dragscroll';
     import { onMount } from 'svelte';
+    import { browser } from '$app/environment';
 
     import Intro from "$lib/Intro.svelte";
     import LangSelect from "$lib/i18n/LangSelect.svelte"
@@ -44,6 +45,16 @@
         capture: "singapore"
       }
     ]
+
+
+    let withRSVP = false;
+    if (browser) {
+      const searchParams = new URLSearchParams(window.location.search);
+
+      if(searchParams.get('rsvp') === 'letmersvpplease') {
+        withRSVP = true;
+      }
+    }
 
 
 
@@ -111,7 +122,9 @@
       {/each}
     </div>
   </div>
+  {#if withRSVP}
   <Rsvp />
+  {/if}
 </div>
 
 
