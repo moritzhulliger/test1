@@ -50,18 +50,27 @@
     let withRSVP = false;
     if (browser) {
       const searchParams = new URLSearchParams(window.location.search);
-
+      console.log("searchParams", searchParams.get('rsvp') )
       if(searchParams.get('rsvp') === 'letmersvpplease') {
+        console.log("lalala");
         withRSVP = true;
       }
     }
 
+    let openRSVP = false;
 
 
 </script>
 <LangSelect />
 <Intro introData={data.intro.data.listIntros.items[0] }/>
-
+{#if withRSVP}
+<div class="container rsvp-container">
+  <button class="rsvp-button" on:click={() => openRSVP = true}>RSVP</button>
+</div>
+{/if}
+{#if openRSVP}
+<Rsvp />
+{/if}
 <div class="top-liner">
   <div class="left-line"></div>
   <div class="subheading">OUR SPECIAL DAYS</div>
@@ -122,14 +131,29 @@
       {/each}
     </div>
   </div>
-  {#if withRSVP}
-  <Rsvp />
-  {/if}
+
 </div>
 
 
   <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
+    .rsvp-button {
+      border: 2px solid #000000; 
+      padding: 10px 30px; 
+      background-color: transparent; /* Transparent background */
+      color: #000000; /* Text color */
+      font-size: 16px; /* Adjust font size as needed */
+      cursor: pointer; /* Cursor style */
+      outline: none; 
+      margin-top: 75px;
+      z-index: 900;
+    }
+
+    .rsvp-container {
+      display: flex;
+      justify-content: center;
+    }
 
     .loader {
       position: absolute;

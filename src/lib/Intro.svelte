@@ -40,7 +40,6 @@ import { t, locale, locales } from "./i18n/i18n";
         </div>
       </div>
 </div>
-
   <style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;500&display=swap');

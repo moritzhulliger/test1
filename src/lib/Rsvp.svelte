@@ -21,6 +21,10 @@
 
     let show = true;
 
+    function closeForm() {
+        show = false;
+    }
+
     async function sendForm() {
         if(numberOfPeople && numberOfPeople) {
             try {
@@ -40,19 +44,27 @@
             } catch (err) {
                 console.log(err);
             }
-
-
-
-
         }
     }
+
 </script>
-{#if show}
-<div class="container-formsli">
-    <div class="formsli">
+{#if show}<div class="envelope" id="envelope">
+    <!-- Envelope flap -->
+    <div class="flap"></div>
+    <!-- Content inside the envelope -->
+    <p>This is a styled envelope that pops out from the right side of the screen.</p>
+  </div>
+<div class="container-formsli" on:click={closeForm}>
+    <div class="formsli" on:click={(event) => { event.stopPropagation()}}>
         <div class="lets-dine">Lets dine together</div>
-        <p class="text"></p>
+        <p class="text">
+            Auch wenn es nun schon einen Moment her ist, würden wir doch gerne einmal alle zusammen essen gehen, zur Feier unserer Hochzeit.
+            Das würden wir gerne in einem speziellen Umfeld machen und laden euch dazu ein uns in der Provence im Restaurant <a href="https://www.beaumier.com/de/properties/capelongue-hotel/">La Capelongue</a> zu besuchen.
+            Das Essen findet am Samstag den 4. Mai statt.
+            Für alle welche von ausserhalb anreisen, haben wir vom 2. Mai bis zum 5. Mai Zimmer reserviert im <a href="https://chateau-bellefontaine.com/">Château Bellefontaine</a>. Dort können wir zusammen ein paar schöne Tage verbringen.
+        </p>
         <form method="POST">	
+            <h2 class="text">RSVP</h2>
             <div>
                 <label>
                     No of Guests: 
@@ -88,13 +100,33 @@
     @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
     .container-formsli {
-        position: absolute;
+        z-index: 1000;
+        position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
         background-color: #1a1a1af2;
     }
+
+    .text {
+        font-family: "EB Garamond", serif;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        text-underline-offset: 0.2em; 
+
+        a {
+            color: white;
+        }
+
+    }
+
+    
+    h2 {
+            font-size: 2em !important;
+            text-align: center;
+            margin-top: 1.2em;
+        }
     
     .accepting {
         input[type="radio"] {
@@ -133,7 +165,7 @@
         font-weight: 400;
         font-size: 3em;
         font-style: normal;
-        padding-bottom: 100px;
+        padding-bottom: 1em;
     }
     .formsli {
         margin-bottom: 100px;
@@ -175,7 +207,5 @@
             margin: .8em 2em;
         }
     }
-
-
 
 </style>
