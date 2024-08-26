@@ -2,5 +2,5 @@
   "AppSyncApiName": "elope",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2024-03-27T20:50:22.654Z"
+  "AuthModeLastUpdated": "2024-08-26T13:55:01.668Z"
 }

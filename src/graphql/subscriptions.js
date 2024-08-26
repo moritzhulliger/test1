@@ -8,6 +8,8 @@ export const onCreateRSVP = /* GraphQL */ `
       Name
       numberofpeople
       email
+      dietary
+      accept
       createdAt
       updatedAt
       __typename
@@ -21,6 +23,8 @@ export const onUpdateRSVP = /* GraphQL */ `
       Name
       numberofpeople
       email
+      dietary
+      accept
       createdAt
       updatedAt
       __typename
@@ -34,6 +38,8 @@ export const onDeleteRSVP = /* GraphQL */ `
       Name
       numberofpeople
       email
+      dietary
+      accept
       createdAt
       updatedAt
       __typename

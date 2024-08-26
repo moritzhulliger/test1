@@ -11,6 +11,8 @@ export const createRSVP = /* GraphQL */ `
       Name
       numberofpeople
       email
+      dietary
+      accept
       createdAt
       updatedAt
       __typename
@@ -27,6 +29,8 @@ export const updateRSVP = /* GraphQL */ `
       Name
       numberofpeople
       email
+      dietary
+      accept
       createdAt
       updatedAt
       __typename
@@ -43,6 +47,8 @@ export const deleteRSVP = /* GraphQL */ `
       Name
       numberofpeople
       email
+      dietary
+      accept
       createdAt
       updatedAt
       __typename

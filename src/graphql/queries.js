@@ -8,6 +8,8 @@ export const getRSVP = /* GraphQL */ `
       Name
       numberofpeople
       email
+      dietary
+      accept
       createdAt
       updatedAt
       __typename
@@ -26,6 +28,8 @@ export const listRSVPS = /* GraphQL */ `
         Name
         numberofpeople
         email
+        dietary
+        accept
         createdAt
         updatedAt
         __typename
