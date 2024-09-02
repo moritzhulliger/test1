@@ -24,8 +24,6 @@ npm run dev
 npm run dev -- --open
 ```
 
-
-
 ## Building
 sdfdsf
 To create a psfd
