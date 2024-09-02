@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3elopestorage45bad612",
+  "bucketName": "elope-storage-45bad612",
+  "policyUUID": "a7ba1e7a",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "DELETE",
+    "READ"
+  ]
+}

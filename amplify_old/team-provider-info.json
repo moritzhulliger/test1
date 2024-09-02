@@ -12,8 +12,14 @@
       "AmplifyAppId": "d2ohna35m9c3rr"
     },
     "categories": {
+      "auth": {
+        "elope": {}
+      },
       "storage": {
         "s3elopestorage45bad612": {}
+      },
+      "api": {
+        "elope": {}
       }
     }
   }

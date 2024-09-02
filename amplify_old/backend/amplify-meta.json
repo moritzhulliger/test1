@@ -1,0 +1,65 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyeb4b980bce2c4-staging-204838-authRole",
+      "UnauthRoleArn": "arn:aws:iam::730335308740:role/amplify-amplifyeb4b980bce2c4-staging-204838-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::730335308740:role/amplify-amplifyeb4b980bce2c4-staging-204838-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-amplifyeb4b980bce2c4-staging-204838-deployment",
+      "UnauthRoleName": "amplify-amplifyeb4b980bce2c4-staging-204838-unauthRole",
+      "StackName": "amplify-amplifyeb4b980bce2c4-staging-204838",
+      "StackId": "arn:aws:cloudformation:eu-north-1:730335308740:stack/amplify-amplifyeb4b980bce2c4-staging-204838/f7d80e00-acd4-11ee-ad0c-0a03b69cf8f6",
+      "AmplifyAppId": "d2ohna35m9c3rr"
+    }
+  },
+  "api": {
+    "elope": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDate": "2025-08-26T13:54:58.004Z",
+              "apiKeyExpirationDays": 365,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        },
+        "GraphQLAPIIdOutput": "6jflwuvgyvhrzkwchhiwuuak3e",
+        "GraphQLAPIEndpointOutput": "https://kybhfx5x4vhszepls5lzr6i6ke.appsync-api.eu-north-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-e2dpde6mnbf4jgtqvfkedwl4pu"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2024-09-02T17:08:19.153Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyeb4b980bce2c4-staging-204838-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apielope"
+      },
+      "lastPushDirHash": "h/m/p3o7eDgmirPIgt9hsHBCUNg="
+    }
+  },
+  "auth": {},
+  "storage": {
+    "s3elopestorage45bad612": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "output": {
+        "BucketName": "elope-storage-45bad612204838-staging",
+        "Region": "eu-north-1"
+      },
+      "lastPushTimeStamp": "2024-09-02T17:08:21.552Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyeb4b980bce2c4-staging-204838-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages3elopestorage45bad612"
+      }
+    }
+  }
+}
